@@ -1,6 +1,6 @@
-# ICC — Consultora de Inteligencia Artificial
+# ICC — Integral Connection Consulting
 
-Sitio web corporativo de ICC, consultora de Inteligencia Artificial para empresas en España.
+Sitio web corporativo de Integral Connection Consulting (ICC), consultora de Inteligencia Artificial para empresas en España.
 
 ## Stack
 
@@ -32,8 +32,8 @@ Cada página es HTML autocontenido (sin plantillas server-side): la cabecera y e
 
 ## Antes de desplegar
 
-1. **Dominio**: todas las etiquetas `canonical`, Open Graph y el `sitemap.xml` usan el dominio placeholder `https://www.icc-ia.es`. Sustitúyelo por el dominio real con una búsqueda y reemplazo global antes de publicar.
-2. **Correo de contacto**: los enlaces `mailto:` usan `hola@icc-ia.es`. Sustitúyelo por la dirección real.
+1. **Dominio**: `canonical`, Open Graph y `sitemap.xml` usan `https://www.integralconnectionconsulting.es`. Si el dominio final es distinto, sustitúyelo con una búsqueda y reemplazo global.
+2. **Correo de contacto**: los enlaces `mailto:` usan `hola@integralconnectionconsulting.es` (bandeja asumida). Si la organización usa otro buzón (`info@`, `contacto@`...), sustitúyelo con una búsqueda y reemplazo global.
 3. **Rutas absolutas**: la navegación usa rutas absolutas (`/servicios/...`). Si el sitio se despliega bajo un subdirectorio (no en la raíz del dominio), ajusta las rutas en `/components/icc-header.js`, `/components/icc-footer.js` y los `href` de cada página.
 
 ## Desarrollo local

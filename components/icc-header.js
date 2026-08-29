@@ -24,11 +24,14 @@ class IccHeader extends HTMLElement {
     this.innerHTML = `
       <header class="border-b border-neutral-200 bg-white sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-6">
-          <div class="flex items-center justify-between h-16">
-            <a href="/" class="text-lg font-bold tracking-tight text-neutral-900">ICC</a>
+          <div class="flex items-center justify-between py-3 min-h-16">
+            <a href="/" class="flex flex-col leading-none">
+              <span class="text-lg font-bold tracking-tight text-neutral-900">ICC</span>
+              <span class="text-[10px] font-medium tracking-wide text-neutral-500 whitespace-nowrap">Integral Connection Consulting</span>
+            </a>
 
             <nav class="hidden md:flex items-center gap-8 text-sm">
-              <div class="relative group h-16 flex items-center">
+              <div class="relative group min-h-16 flex items-center">
                 <button type="button"
                         class="flex items-center gap-1.5 text-neutral-900 hover:text-neutral-600 transition-colors duration-150 ${active === 'servicios' ? 'font-semibold' : ''}"
                         aria-haspopup="true">

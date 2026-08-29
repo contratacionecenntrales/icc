@@ -19,6 +19,7 @@ class IccFooter extends HTMLElement {
           <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
               <div class="text-lg font-bold tracking-tight text-neutral-900">ICC</div>
+              <div class="text-xs font-medium tracking-wide text-neutral-500">Integral Connection Consulting</div>
               <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
                 Consultora de Inteligencia Artificial para empresas. Diagnóstico, implementación y control de agentes de IA en producción.
               </p>
@@ -44,14 +45,14 @@ class IccFooter extends HTMLElement {
             <div>
               <div class="text-xs font-semibold uppercase tracking-wider text-neutral-500">Contacto</div>
               <ul class="mt-4 space-y-3 text-sm text-neutral-600">
-                <li><a href="mailto:hola@icc-ia.es" class="hover:text-neutral-900 transition-colors duration-150">hola@icc-ia.es</a></li>
+                <li><a href="mailto:hola@integralconnectionconsulting.es" class="hover:text-neutral-900 transition-colors duration-150">hola@integralconnectionconsulting.es</a></li>
                 <li>España — servicio nacional</li>
               </ul>
             </div>
           </div>
 
           <div class="mt-16 pt-8 border-t border-neutral-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <p class="text-xs text-neutral-500">© ${year} ICC. Todos los derechos reservados.</p>
+            <p class="text-xs text-neutral-500">© ${year} Integral Connection Consulting (ICC). Todos los derechos reservados.</p>
             <p class="text-xs text-neutral-500">Consultora de Inteligencia Artificial — España.</p>
           </div>
         </div>

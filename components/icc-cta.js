@@ -3,9 +3,9 @@ class IccCta extends HTMLElement {
     const heading = this.getAttribute('heading') || '';
     const body = this.getAttribute('body') || '';
     const primaryLabel = this.getAttribute('primary-label') || 'Solicitar reunión';
-    const primaryHref = this.getAttribute('primary-href') || 'mailto:hola@icc-ia.es';
+    const primaryHref = this.getAttribute('primary-href') || 'mailto:hola@integralconnectionconsulting.es';
     const secondaryLabel = this.getAttribute('secondary-label') || 'Escribir por correo';
-    const secondaryHref = this.getAttribute('secondary-href') || 'mailto:hola@icc-ia.es';
+    const secondaryHref = this.getAttribute('secondary-href') || 'mailto:hola@integralconnectionconsulting.es';
 
     this.innerHTML = `
       <section id="contacto" class="bg-neutral-900 text-white">
