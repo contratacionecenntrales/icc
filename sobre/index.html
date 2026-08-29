@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre ICC — Consultora de Inteligencia Artificial</title>
+<meta name="description" content="ICC es una consultora de Inteligencia Artificial independiente, sin vinculación a un único proveedor de modelos o infraestructura, con servicio en toda España.">
+<link rel="canonical" href="https://www.icc-ia.es/sobre/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ICC">
+<meta property="og:title" content="Sobre ICC — Consultora de Inteligencia Artificial">
+<meta property="og:description" content="Consultora de IA independiente, sin vinculación a un único proveedor de modelos o infraestructura.">
+<meta property="og:url" content="https://www.icc-ia.es/sobre/">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } }
+  };
+</script>
+<style>
+  body { font-family: 'Inter', system-ui, sans-serif; }
+</style>
+</head>
+<body class="bg-white text-neutral-900 antialiased">
+
+<icc-header active="sobre"></icc-header>
+
+<main>
+
+  <section class="border-b border-neutral-200">
+    <div class="max-w-6xl mx-auto px-6 py-20 md:py-24">
+      <p class="text-xs font-semibold uppercase tracking-wider text-neutral-500">Compañía</p>
+      <h1 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight max-w-3xl">
+        Consultora de Inteligencia Artificial. Sin dependencia de un único proveedor.
+      </h1>
+      <p class="mt-6 text-lg text-neutral-600 max-w-2xl leading-relaxed">
+        ICC diagnostica, diseña e implementa sistemas de IA para empresas, sin estar vinculada a un modelo, plataforma o proveedor de infraestructura concreto.
+      </p>
+    </div>
+  </section>
+
+  <section class="border-b border-neutral-200">
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-200 border border-neutral-200">
+        <div class="bg-white p-8">
+          <h2 class="text-base font-bold tracking-tight">Independencia</h2>
+          <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+            La recomendación de arquitectura y proveedor se basa en el caso de uso, no en un acuerdo comercial con un fabricante de modelos.
+          </p>
+        </div>
+        <div class="bg-white p-8">
+          <h2 class="text-base font-bold tracking-tight">Alcance</h2>
+          <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+            Trabajamos con organizaciones que necesitan pasar de una prueba de concepto a un sistema de IA en producción, con control de riesgo desde el primer despliegue.
+          </p>
+        </div>
+        <div class="bg-white p-8">
+          <h2 class="text-base font-bold tracking-tight">Cobertura</h2>
+          <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+            Servicio en toda España, con equipos capaces de operar de forma remota o presencial según el proyecto.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-neutral-200">
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Compromisos</h2>
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-200 border border-neutral-200">
+        <div class="bg-white p-8">
+          <p class="text-sm text-neutral-600 leading-relaxed">Cada proyecto empieza con un diagnóstico, no con una propuesta de herramienta.</p>
+        </div>
+        <div class="bg-white p-8">
+          <p class="text-sm text-neutral-600 leading-relaxed">Cada sistema desplegado incluye trazabilidad de decisión y procedimiento de reversión.</p>
+        </div>
+        <div class="bg-white p-8">
+          <p class="text-sm text-neutral-600 leading-relaxed">Cada métrica de éxito se define antes del despliegue, no después.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <icc-cta
+    heading="Hable con un consultor antes de elegir un proveedor de IA."
+    body="El diagnóstico inicial es independiente de cualquier herramienta o modelo concreto."
+    primary-label="Solicitar diagnóstico gratuito"
+    primary-href="/contacto/"
+    secondary-label="Escribir por correo"
+    secondary-href="mailto:hola@icc-ia.es">
+  </icc-cta>
+
+</main>
+
+<icc-footer></icc-footer>
+
+<script type="module" src="/components/icc-header.js"></script>
+<script type="module" src="/components/icc-footer.js"></script>
+<script type="module" src="/components/icc-cta.js"></script>
+</body>
+</html>
