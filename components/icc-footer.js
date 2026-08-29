@@ -18,8 +18,13 @@ class IccFooter extends HTMLElement {
         <div class="max-w-6xl mx-auto px-6 py-16">
           <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
-              <div class="text-lg font-bold tracking-tight text-neutral-900">ICC</div>
-              <div class="text-xs font-medium tracking-wide text-neutral-500">Integral Connection Consulting</div>
+              <div class="flex items-center gap-2.5">
+                <img src="/assets/logo-mark.svg" alt="" width="30" height="30" class="shrink-0">
+                <span class="flex flex-col leading-none">
+                  <span class="text-lg font-bold tracking-tight text-neutral-900">ICC</span>
+                  <span class="text-[10px] font-medium tracking-wide text-neutral-500">Integral Connection Consulting</span>
+                </span>
+              </div>
               <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
                 Consultora de Inteligencia Artificial para empresas. Diagnóstico, implementación y control de agentes de IA en producción.
               </p>

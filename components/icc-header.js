@@ -25,9 +25,12 @@ class IccHeader extends HTMLElement {
       <header class="border-b border-neutral-200 bg-white sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-6">
           <div class="flex items-center justify-between py-3 min-h-16">
-            <a href="/" class="flex flex-col leading-none">
-              <span class="text-lg font-bold tracking-tight text-neutral-900">ICC</span>
-              <span class="text-[10px] font-medium tracking-wide text-neutral-500 whitespace-nowrap">Integral Connection Consulting</span>
+            <a href="/" class="flex items-center gap-2.5">
+              <img src="/assets/logo-mark.svg" alt="" width="34" height="34" class="shrink-0">
+              <span class="flex flex-col leading-none">
+                <span class="text-lg font-bold tracking-tight text-neutral-900">ICC</span>
+                <span class="text-[10px] font-medium tracking-wide text-neutral-500 whitespace-nowrap">Integral Connection Consulting</span>
+              </span>
             </a>
 
             <nav class="hidden md:flex items-center gap-8 text-sm">
