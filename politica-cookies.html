@@ -34,7 +34,18 @@
       <nav id="primaryNav">
         <a href="index.html#inicio">Inicio</a>
         <a href="divisiones.html">Divisiones</a>
-        <a href="servicios.html">Servicios</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Sectores<span class="nav-dropdown-caret" aria-hidden="true"></span>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="venta-presencial.html"><span class="nav-dropdown-item-title">Venta Presencial</span><span class="nav-dropdown-item-desc">Residencial, Pymes y Stand</span></a>
+            <a href="venta-telefonica.html"><span class="nav-dropdown-item-title">Venta Telefónica</span><span class="nav-dropdown-item-desc">Emisión y recepción de llamadas</span></a>
+            <a href="punto-de-venta.html"><span class="nav-dropdown-item-title">Punto de Venta</span><span class="nav-dropdown-item-desc">GPV's, promociones y suministro a tiendas</span></a>
+            <a href="consultoria-seleccion-formacion.html"><span class="nav-dropdown-item-title">Consultoría Selección &amp; Formación</span><span class="nav-dropdown-item-desc">Equipos comerciales a medida</span></a>
+            <a href="servicios.html" class="nav-dropdown-more">Ver todos los sectores →</a>
+          </div>
+        </div>
         <a href="index.html#nosotros">Nosotros</a>
         <a href="index.html#proceso">Proceso</a>
         <a href="index.html#contacto">Contacto</a>
@@ -150,6 +161,13 @@
           <a href="division-seguros.html">Seguros</a>
         </div>
         <div>
+          <strong>Sectores</strong>
+          <a href="venta-presencial.html">Venta Presencial</a>
+          <a href="venta-telefonica.html">Venta Telefónica</a>
+          <a href="punto-de-venta.html">Punto de Venta</a>
+          <a href="consultoria-seleccion-formacion.html">Selección &amp; Formación</a>
+        </div>
+        <div>
           <strong>Contacto</strong>
           <a href="mailto:info@integralconnection.es">info@integralconnection.es</a>
           <a href="tel:+34900000000">+34 900 000 000</a>
@@ -178,16 +196,45 @@
     (function () {
       var toggle = document.getElementById('navToggle');
       var nav = document.getElementById('primaryNav');
-      if (!toggle || !nav) return;
-      toggle.addEventListener('click', function () {
-        var open = nav.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-      nav.querySelectorAll('a').forEach(function (a) {
-        a.addEventListener('click', function () {
-          nav.classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          var open = nav.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
+        nav.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () {
+            nav.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      document.querySelectorAll('.nav-dropdown').forEach(function (dropdown) {
+        var trigger = dropdown.querySelector('.nav-dropdown-trigger');
+        if (!trigger) return;
+        trigger.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var isOpen = dropdown.classList.toggle('open');
+          trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      });
+      document.addEventListener('click', function (e) {
+        document.querySelectorAll('.nav-dropdown.open').forEach(function (dropdown) {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('open');
+            var trigger = dropdown.querySelector('.nav-dropdown-trigger');
+            if (trigger) trigger.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.nav-dropdown.open').forEach(function (dropdown) {
+            dropdown.classList.remove('open');
+            var trigger = dropdown.querySelector('.nav-dropdown-trigger');
+            if (trigger) trigger.setAttribute('aria-expanded', 'false');
+          });
+        }
       });
     })();
   </script>
