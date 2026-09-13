@@ -1,32 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Integral Connection Consulting">
   <defs>
-    <linearGradient id="icc-gold-a" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FCE7A8"/>
-      <stop offset="55%" stop-color="#D9A62B"/>
-      <stop offset="100%" stop-color="#B4841A"/>
-    </linearGradient>
-    <linearGradient id="icc-gold-b" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#C9971F"/>
-      <stop offset="55%" stop-color="#96700F"/>
-      <stop offset="100%" stop-color="#6B4E0A"/>
+    <linearGradient id="ic-amber" x1="8%" y1="95%" x2="95%" y2="5%">
+      <stop offset="0%" stop-color="#FFDD33"/>
+      <stop offset="45%" stop-color="#F6B22D"/>
+      <stop offset="100%" stop-color="#DE7F1B"/>
     </linearGradient>
   </defs>
 
-  <!-- Anillo hexagonal facetado (marca) -->
-  <g stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round">
-    <polygon points="100,8 179.7,54 146.8,73 100,46 53.2,73 20.3,54" fill="url(#icc-gold-a)"/>
-    <polygon points="179.7,54 179.7,146 146.8,127 146.8,73" fill="url(#icc-gold-b)"/>
-    <polygon points="179.7,146 100,192 100,154 146.8,127" fill="url(#icc-gold-a)"/>
-    <polygon points="100,192 20.3,146 53.2,127 100,154" fill="url(#icc-gold-b)"/>
-    <polygon points="20.3,146 20.3,54 53.2,73 53.2,127" fill="url(#icc-gold-a)"/>
-    <polygon points="20.3,54 100,8 100,46 53.2,73" fill="url(#icc-gold-b)"/>
-  </g>
+  <!-- Anillo hexagonal, degradado único (sin facetas alternas) -->
+  <path
+    fill="url(#ic-amber)"
+    fill-rule="evenodd"
+    d="M100,8 179.7,54 179.7,146 100,192 20.3,146 20.3,54 Z
+       M100,46 146.8,73 146.8,127 100,154 53.2,127 53.2,73 Z"
+  />
 
-  <!-- Núcleo blanco con borde dorado -->
-  <polygon points="100,46 146.8,73 146.8,127 100,154 53.2,127 53.2,73" fill="#FFFFFF" stroke="#C9971F" stroke-width="2"/>
+  <!-- Pliegues sutiles (efecto cinta) arriba y abajo -->
+  <path d="M83,25 L100,46" stroke="#FFF6DD" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <path d="M117,175 L100,154" stroke="#B9660F" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- Núcleo blanco -->
+  <polygon points="100,46 146.8,73 146.8,127 100,154 53.2,127 53.2,73" fill="#FFFFFF"/>
 
   <!-- Monograma IC -->
-  <text x="100" y="106" text-anchor="middle" dominant-baseline="central"
-        font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="66"
-        letter-spacing="-2" fill="#0F172A">IC</text>
+  <text x="100" y="107" text-anchor="middle" dominant-baseline="central"
+        font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="64"
+        letter-spacing="-2" fill="#4A4A4A">IC</text>
 </svg>
