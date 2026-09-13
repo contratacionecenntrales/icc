@@ -3,48 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Integral Connection Consulting | Soluciones Corporativas 360</title>
+  <title>Integral Connection Consulting | Consultoría Estratégica 360</title>
+  <meta name="description" content="Integral Connection Consulting: consultoría integral B2B. Optimizamos procesos, acompañamos la transformación comercial y tecnológica de tu empresa con un modelo de acompañamiento 360°.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://www.integralconnection.es/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Integral Connection Consulting">
+  <meta property="og:title" content="Integral Connection Consulting | Consultoría Estratégica 360">
+  <meta property="og:description" content="Optimizamos procesos, conectamos oportunidades y acompañamos a tu organización hacia una transformación rentable y sostenible.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* VARIABLES DE MARCA Y ESTILOS GLOBALES */
     :root {
       --icc-navy: #0F172A;
-      --icc-blue: #1E40AF;
-      --icc-accent: #3B82F6;
+      --icc-navy-2: #1B2A4A;
+      --icc-gold: #C9971F;
+      --icc-gold-light: #F0C24B;
+      --icc-gold-dark: #8B6914;
       --icc-light-bg: #F8FAFC;
       --icc-text-dark: #0F172A;
-      --icc-text-muted: #475569;
+      --icc-text-muted: #55627A;
+      --icc-border: #E2E8F0;
       --icc-white: #FFFFFF;
-      --icc-gradient: linear-gradient(135deg, #0F172A 0%, #1E40AF 60%, #3B82F6 100%);
+      --icc-gradient: linear-gradient(135deg, #0F172A 0%, #1B2A4A 55%, #3A2E12 100%);
+      --icc-gradient-gold: linear-gradient(135deg, var(--icc-gold-light) 0%, var(--icc-gold) 60%, var(--icc-gold-dark) 100%);
       --icc-radius-pill: 9999px;
       --icc-radius-card: 16px;
-      --icc-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --icc-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.08);
+      --icc-shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.14);
+      --icc-font: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --icc-dur: 0.25s;
+      --icc-ease: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
     body { font-family: var(--icc-font); color: var(--icc-text-dark); background: var(--icc-white); -webkit-font-smoothing: antialiased; }
     a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+    ul { list-style: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-    /* CABECERA FIJA */
+    /* CABECERA */
     header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
-      background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px);
-      border-bottom: 1px solid #E2E8F0;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255, 255, 255, 0.98);
+      border-bottom: 1px solid var(--icc-border);
     }
     .nav-container {
       max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 76px;
-      display: flex; align-items: center; justify-content: space-between;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
     }
-    .logo { font-weight: 800; font-size: 1.2rem; color: var(--icc-navy); letter-spacing: -0.02em; }
-    .logo span { color: var(--icc-accent); }
+    .brand { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
+    .brand img { height: 38px; width: 38px; }
+    .brand-name { font-weight: 800; font-size: 1.02rem; letter-spacing: -0.01em; color: var(--icc-navy); line-height: 1.1; white-space: nowrap; }
+    .brand-name span { color: var(--icc-gold-dark); }
+
     nav { display: flex; gap: 28px; align-items: center; }
-    nav a { font-size: 14.5px; font-weight: 600; color: var(--icc-text-muted); transition: color 0.2s; }
-    nav a:hover { color: var(--icc-accent); }
+    nav a { font-size: 14.5px; font-weight: 600; color: var(--icc-text-muted); transition: color var(--icc-dur) var(--icc-ease); white-space: nowrap; }
+    nav a:hover { color: var(--icc-gold-dark); }
+    nav a.nav-cta { display: none; }
+
+    .header-actions { display: flex; align-items: center; gap: 14px; }
     .btn-cta {
-      background: var(--icc-accent); color: var(--icc-white); font-weight: 700;
+      background: var(--icc-gradient-gold); color: var(--icc-navy); font-weight: 800;
       font-size: 14px; padding: 11px 22px; border-radius: var(--icc-radius-pill);
-      transition: transform 0.2s, background 0.2s;
+      box-shadow: 0 8px 20px rgba(201, 151, 31, 0.35);
+      transition: transform var(--icc-dur) var(--icc-ease), box-shadow var(--icc-dur) var(--icc-ease);
+      white-space: nowrap;
     }
-    .btn-cta:hover { background: var(--icc-blue); transform: translateY(-1px); }
+    .btn-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(201, 151, 31, 0.45); }
+
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; flex: 0 0 auto; }
+    .nav-toggle span { width: 22px; height: 2px; background: var(--icc-navy); border-radius: 2px; transition: transform var(--icc-dur) var(--icc-ease), opacity var(--icc-dur) var(--icc-ease); }
+    .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     /* SECCIÓN HERO */
     .hero {
@@ -52,65 +88,134 @@
       display: flex; align-items: center; background: var(--icc-gradient);
       padding-top: 76px; color: var(--icc-white);
     }
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(115deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 64, 175, 0.7) 100%);
+    .hero::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(60% 55% at 88% 8%, rgba(240, 194, 75, 0.28) 0%, rgba(240, 194, 75, 0) 70%);
     }
-    .hero-content {
-      position: relative; max-width: 1200px; margin: 0 auto;
-      padding: 64px 24px; width: 100%; text-align: right;
-    }
-    .hero-inner { max-width: 760px; margin-left: auto; }
+    .hero-content { position: relative; max-width: 1200px; margin: 0 auto; padding: 64px 24px; width: 100%; }
+    .hero-inner { max-width: 760px; margin-left: auto; text-align: right; }
     .badge {
       display: inline-block; font-size: 12px; font-weight: 800; text-transform: uppercase;
-      letter-spacing: 0.14em; color: var(--icc-white); background: rgba(255, 255, 255, 0.15);
+      letter-spacing: 0.14em; color: var(--icc-navy); background: var(--icc-gradient-gold);
       padding: 8px 16px; border-radius: var(--icc-radius-pill); margin-bottom: 24px;
     }
-    .hero h1 { font-size: clamp(2.3rem, 5vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 22px; }
-    .hero p { font-size: clamp(1.05rem, 1.8vw, 1.35rem); font-weight: 300; opacity: 0.92; margin-bottom: 36px; line-height: 1.55; }
+    .hero h1 { font-size: clamp(2.3rem, 5vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 22px; letter-spacing: -0.02em; }
+    .hero p { font-size: clamp(1.05rem, 1.8vw, 1.35rem); font-weight: 400; opacity: 0.9; margin-bottom: 36px; line-height: 1.55; margin-left: auto; }
     .hero-buttons { display: flex; gap: 14px; justify-content: flex-end; flex-wrap: wrap; }
-    .btn-white { background: var(--icc-white); color: var(--icc-navy); font-weight: 800; padding: 16px 30px; border-radius: var(--icc-radius-pill); }
-    .btn-outline { border: 1.5px solid rgba(255, 255, 255, 0.6); color: var(--icc-white); font-weight: 700; padding: 15px 28px; border-radius: var(--icc-radius-pill); }
+    .btn-white {
+      background: var(--icc-gradient-gold); color: var(--icc-navy); font-weight: 800; padding: 16px 30px;
+      border-radius: var(--icc-radius-pill); box-shadow: 0 16px 40px rgba(0,0,0,0.28);
+      display: inline-flex; align-items: center; gap: 8px; transition: transform var(--icc-dur) var(--icc-ease);
+    }
+    .btn-white:hover { transform: translateY(-2px); }
+    .btn-outline {
+      border: 1.5px solid rgba(255, 255, 255, 0.5); color: var(--icc-white); font-weight: 700; padding: 15px 28px;
+      border-radius: var(--icc-radius-pill); backdrop-filter: blur(4px); transition: background var(--icc-dur) var(--icc-ease);
+    }
+    .btn-outline:hover { background: rgba(255, 255, 255, 0.12); }
 
-    /* SECCIÓN MÉTRICAS */
-    .stats { background: var(--icc-navy); color: var(--icc-white); padding: 80px 0; }
+    /* MÉTRICAS */
+    .stats { background: var(--icc-navy-2); color: var(--icc-white); padding: 72px 0; }
     .stats-container {
       max-width: 1200px; margin: 0 auto; padding: 0 24px;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; align-items: center;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; text-align: center;
     }
-    .stat-number { font-size: clamp(3rem, 7vw, 5rem); font-weight: 800; color: var(--icc-accent); }
+    .stat-number { font-size: clamp(2.4rem, 5vw, 3.4rem); font-weight: 800; background: var(--icc-gradient-gold); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 8px; }
+    .stat-label { font-size: 14.5px; color: rgba(255,255,255,0.75); max-width: 26ch; margin: 0 auto; }
 
-    /* SECCIÓN TARJETAS (SERVICES) */
-    .services { padding: 100px 0; background: var(--icc-light-bg); }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    /* CABECERAS DE SECCIÓN */
     .section-header { max-width: 640px; margin-bottom: 56px; }
-    .section-subtitle { font-size: 12px; font-weight: 800; text-transform: uppercase; color: var(--icc-accent); letter-spacing: 0.14em; margin-bottom: 12px; }
-    .section-title { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
+    .section-header.center { max-width: 680px; margin-left: auto; margin-right: auto; text-align: center; }
+    .section-subtitle { font-size: 12px; font-weight: 800; text-transform: uppercase; color: var(--icc-gold-dark); letter-spacing: 0.14em; margin-bottom: 12px; }
+    .section-title { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 16px; letter-spacing: -0.015em; }
+    .section-desc { color: var(--icc-text-muted); font-size: 1.05rem; line-height: 1.6; }
+
+    /* POR QUÉ ELEGIRNOS */
+    .why-us { padding: 100px 0; background: var(--icc-white); }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 28px; }
+    .why-card { padding: 30px 24px; border: 1px solid var(--icc-border); border-radius: var(--icc-radius-card); transition: transform var(--icc-dur) var(--icc-ease), box-shadow var(--icc-dur) var(--icc-ease); }
+    .why-card:hover { transform: translateY(-4px); box-shadow: var(--icc-shadow-lg); }
+    .why-icon { width: 52px; height: 52px; border-radius: 14px; background: var(--icc-gradient-gold); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .why-icon svg { width: 26px; height: 26px; stroke: var(--icc-navy); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .why-card h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 8px; color: var(--icc-navy); }
+    .why-card p { font-size: 14.5px; color: var(--icc-text-muted); line-height: 1.6; }
+
+    /* SERVICIOS / TARJETAS */
+    .services { padding: 100px 0; background: var(--icc-light-bg); }
     .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
     .card {
-      background: var(--icc-white); border: 1px solid #E2E8F0; border-radius: var(--icc-radius-card);
-      overflow: hidden; transition: transform 0.3s, box-shadow 0.3s;
+      background: var(--icc-white); border: 1px solid var(--icc-border); border-radius: var(--icc-radius-card);
+      overflow: hidden; transition: transform var(--icc-dur) var(--icc-ease), box-shadow var(--icc-dur) var(--icc-ease);
+      display: flex; flex-direction: column;
     }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.06); }
-    .card-img { width: 100%; height: 200px; background: #CBD5E1; object-fit: cover; }
-    .card-body { padding: 26px; }
-    .card-tag { font-size: 11.5px; font-weight: 800; text-transform: uppercase; color: var(--icc-accent); margin-bottom: 10px; display: block; }
+    .card:hover { transform: translateY(-4px); box-shadow: var(--icc-shadow-lg); }
+    .card-icon-wrap {
+      width: 100%; height: 160px; background: var(--icc-gradient);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .card-icon-wrap svg { width: 52px; height: 52px; stroke: var(--icc-gold-light); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .card-body { padding: 26px; flex: 1; display: flex; flex-direction: column; }
+    .card-tag { font-size: 11.5px; font-weight: 800; text-transform: uppercase; color: var(--icc-gold-dark); margin-bottom: 10px; display: block; letter-spacing: 0.08em; }
     .card-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 10px; color: var(--icc-navy); }
-    .card-text { font-size: 15px; color: var(--icc-text-muted); line-height: 1.6; margin-bottom: 18px; }
-    .card-link { font-weight: 700; color: var(--icc-accent); display: inline-flex; align-items: center; gap: 6px; }
+    .card-text { font-size: 15px; color: var(--icc-text-muted); line-height: 1.6; margin-bottom: 18px; flex: 1; }
+    .card-link { font-weight: 700; color: var(--icc-gold-dark); display: inline-flex; align-items: center; gap: 6px; }
+
+    /* PROCESO */
+    .process { padding: 100px 0; background: var(--icc-white); }
+    .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; position: relative; }
+    .process-step { text-align: left; padding-top: 8px; }
+    .process-number {
+      width: 48px; height: 48px; border-radius: 50%; background: var(--icc-navy); color: var(--icc-gold-light);
+      display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; margin-bottom: 18px;
+      border: 2px solid var(--icc-gold);
+    }
+    .process-step h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 8px; color: var(--icc-navy); }
+    .process-step p { font-size: 14.5px; color: var(--icc-text-muted); line-height: 1.6; }
+
+    /* CTA BANNER */
+    .cta-banner { position: relative; overflow: hidden; background: var(--icc-gradient); color: var(--icc-white); }
+    .cta-banner::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(50% 80% at 15% 20%, rgba(240, 194, 75, 0.22) 0%, rgba(240, 194, 75, 0) 70%);
+    }
+    .cta-banner-inner { position: relative; max-width: 900px; margin: 0 auto; padding: clamp(64px, 9vw, 110px) 24px; text-align: center; }
+    .cta-banner-inner .section-subtitle { color: rgba(255,255,255,0.85); }
+    .cta-banner-inner h2 { margin: 0 0 18px; font-weight: 800; font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.12; letter-spacing: -0.015em; }
+    .cta-banner-inner p { margin: 0 auto 32px; max-width: 56ch; font-weight: 400; font-size: clamp(1rem, 1.6vw, 1.25rem); line-height: 1.6; color: rgba(255,255,255,0.85); }
 
     /* FOOTER */
     footer { background: var(--icc-navy); color: rgba(255, 255, 255, 0.75); padding: 72px 0 32px; }
-    .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; }
-    .footer-brand h3 { color: var(--icc-white); margin-bottom: 12px; }
-    .footer-links { display: flex; gap: 48px; }
+    .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px 64px; }
+    .footer-brand { flex: 1 1 280px; max-width: 420px; }
+    .footer-brand .brand { margin-bottom: 16px; }
+    .footer-brand .brand-name { color: var(--icc-white); }
+    .footer-brand .brand-name span { color: var(--icc-gold-light); }
+    .footer-brand p { font-size: 14.5px; line-height: 1.6; color: rgba(255,255,255,0.6); }
+    .footer-links { display: flex; gap: 56px; flex-wrap: wrap; }
     .footer-links div { display: flex; flex-direction: column; gap: 12px; }
-    .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding: 24px 24px 0; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13px; text-align: center; }
+    .footer-links strong { color: var(--icc-white); font-size: 14px; margin-bottom: 4px; }
+    .footer-links a, .footer-links span { font-size: 14.5px; color: rgba(255,255,255,0.68); transition: color var(--icc-dur); }
+    .footer-links a:hover { color: var(--icc-gold-light); }
+    .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding: 24px 24px 0; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13px; text-align: center; color: rgba(255,255,255,0.5); }
 
     @media (max-width: 768px) {
-      nav { display: none; }
-      .hero-content { text-align: left; }
+      nav {
+        position: fixed; inset: 76px 0 0 0; background: var(--icc-white); flex-direction: column;
+        align-items: stretch; padding: 20px 24px; gap: 0; transform: translateX(100%);
+        transition: transform var(--icc-dur) var(--icc-ease); overflow-y: auto;
+      }
+      nav.open { transform: translateX(0); }
+      nav a { padding: 16px 4px; border-bottom: 1px solid var(--icc-border); }
+      nav a.nav-cta { display: flex; justify-content: center; margin-top: 20px; border-bottom: none; }
+      .nav-toggle { display: flex; }
+      .header-actions .btn-cta { display: none; }
+      .hero-inner { text-align: left; margin-left: 0; }
+      .hero p { margin-left: 0; }
       .hero-buttons { justify-content: flex-start; }
+    }
+
+    @media (max-width: 400px) {
+      .brand-name { display: none; }
     }
   </style>
 </head>
@@ -119,43 +224,99 @@
   <!-- CABECERA -->
   <header>
     <div class="nav-container">
-      <a href="#" class="logo">INTEGRAL <span>CONNECTION</span></a>
-      <nav>
+      <a href="#inicio" class="brand" aria-label="Integral Connection Consulting, inicio">
+        <img src="assets/logo.svg" alt="Integral Connection Consulting">
+        <span class="brand-name">INTEGRAL <span>CONNECTION</span></span>
+      </a>
+
+      <nav id="primaryNav">
         <a href="#inicio">Inicio</a>
         <a href="#servicios">Servicios</a>
         <a href="#nosotros">Nosotros</a>
+        <a href="#proceso">Proceso</a>
         <a href="#contacto">Contacto</a>
+        <a href="#contacto" class="btn-cta nav-cta">Hablemos</a>
       </nav>
-      <a href="#contacto" class="btn-cta">Hablemos</a>
+
+      <div class="header-actions">
+        <a href="#contacto" class="btn-cta">Hablemos</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primaryNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <!-- HÉROE PRINCIPAL -->
   <section class="hero" id="inicio">
-    <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-inner">
-        <span class="badge">CONSULTORÍA INTEGRAL B2B</span>
+        <span class="badge">Consultoría integral B2B</span>
         <h1>Impulsamos el crecimiento estratégico de tu empresa.</h1>
         <p>Optimizamos procesos, conectamos oportunidades y acompañamos a tu organización hacia una transformación rentable y sostenible.</p>
         <div class="hero-buttons">
-          <a href="#contacto" class="btn-white">Solicitar Diagnóstico →</a>
-          <a href="#servicios" class="btn-outline">Ver Soluciones</a>
+          <a href="#contacto" class="btn-white">Solicitar diagnóstico <span>→</span></a>
+          <a href="#servicios" class="btn-outline">Ver soluciones</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- MÉTRICAS -->
-  <section class="stats">
+  <section class="stats" aria-label="Cifras destacadas">
     <div class="stats-container">
       <div>
-        <span class="section-subtitle">Impacto Demostrado</span>
         <div class="stat-number">+95%</div>
-        <p>De eficiencia operativa en los proyectos empresariales ejecutados por nuestro equipo.</p>
+        <p class="stat-label">Eficiencia operativa en los proyectos ejecutados por nuestro equipo</p>
       </div>
       <div>
-        <p style="font-size: 1.2rem; line-height: 1.6;">Diseñamos modelos de acompañamiento 360° adaptados a los retos específicos de cada sector corporativo.</p>
+        <div class="stat-number">360°</div>
+        <p class="stat-label">Modelo de acompañamiento adaptado a cada sector corporativo</p>
+      </div>
+      <div>
+        <div class="stat-number">100%</div>
+        <p class="stat-label">Enfoque a resultados medibles y sostenibles en el tiempo</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ ELEGIRNOS -->
+  <section class="why-us" id="nosotros">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Por qué Integral Connection</span>
+        <h2 class="section-title">Un partner, no solo un proveedor.</h2>
+        <p class="section-desc">Combinamos experiencia estratégica, metodología propia y acompañamiento cercano para que cada proyecto se traduzca en resultados reales.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <h3>Experiencia contrastada</h3>
+          <p>Equipo especializado en consultoría de negocio, operaciones y transformación digital.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+          <h3>Resultados medibles</h3>
+          <p>Diagnósticos y KPIs claros desde el primer día para evaluar el impacto real de cada acción.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3>Acompañamiento cercano</h3>
+          <p>Trabajamos codo con codo con tu equipo, sin dejarte solo tras la fase de diagnóstico.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 12 15 16 10"></polyline></svg>
+          </div>
+          <h3>Compromiso ético</h3>
+          <p>Transparencia y rigor en cada recomendación, priorizando la sostenibilidad del negocio.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -166,43 +327,89 @@
       <div class="section-header">
         <span class="section-subtitle">Especialidades</span>
         <h2 class="section-title">Soluciones diseñadas para escalar tu negocio.</h2>
-        <p style="color: var(--icc-text-muted);">Un enfoque metódico para la optimización comercial, operativa y tecnológica.</p>
+        <p class="section-desc">Un enfoque metódico para la optimización comercial, operativa y tecnológica.</p>
       </div>
 
       <div class="cards-grid">
-        <!-- Tarjeta 1 -->
         <div class="card">
-          <div class="card-img" style="background: #94A3B8;"></div>
+          <div class="card-icon-wrap">
+            <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+          </div>
           <div class="card-body">
             <span class="card-tag">Estrategia</span>
             <h3 class="card-title">Consultoría de Procesos</h3>
             <p class="card-text">Rediseñamos la estructura operativa para reducir costes y acelerar la toma de decisiones.</p>
-            <a href="#" class="card-link">Saber más <span>→</span></a>
+            <a href="#contacto" class="card-link">Saber más <span>→</span></a>
           </div>
         </div>
 
-        <!-- Tarjeta 2 -->
         <div class="card">
-          <div class="card-img" style="background: #64748B;"></div>
+          <div class="card-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
           <div class="card-body">
             <span class="card-tag">Operaciones</span>
             <h3 class="card-title">Acompañamiento Comercial</h3>
             <p class="card-text">Formamos y dotamos a redes comerciales de herramientas tecnológicas de última generación.</p>
-            <a href="#" class="card-link">Saber más <span>→</span></a>
+            <a href="#contacto" class="card-link">Saber más <span>→</span></a>
           </div>
         </div>
 
-        <!-- Tarjeta 3 -->
         <div class="card">
-          <div class="card-img" style="background: #475569;"></div>
+          <div class="card-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+          </div>
           <div class="card-body">
             <span class="card-tag">Tecnología</span>
             <h3 class="card-title">Transformación Digital</h3>
             <p class="card-text">Integración de herramientas en la nube y automatización para escalar la productividad.</p>
-            <a href="#" class="card-link">Saber más <span>→</span></a>
+            <a href="#contacto" class="card-link">Saber más <span>→</span></a>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="process" id="proceso">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-subtitle">Metodología</span>
+        <h2 class="section-title">Cómo trabajamos contigo.</h2>
+        <p class="section-desc">Un proceso claro, de principio a fin, para que sepas en todo momento en qué fase está tu proyecto.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-number">1</div>
+          <h3>Diagnóstico</h3>
+          <p>Analizamos tu situación actual, procesos y objetivos de negocio.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">2</div>
+          <h3>Estrategia</h3>
+          <p>Diseñamos un plan de acción a medida, con prioridades y plazos claros.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">3</div>
+          <h3>Implementación</h3>
+          <p>Ejecutamos junto a tu equipo, aportando herramientas y metodología.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">4</div>
+          <h3>Seguimiento</h3>
+          <p>Medimos resultados y ajustamos el rumbo para garantizar el impacto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="cta-banner-inner">
+      <span class="section-subtitle">Da el paso</span>
+      <h2>Empecemos a transformar tu negocio.</h2>
+      <p>Cuéntanos tu reto y te propondremos un plan de acompañamiento adaptado a tu empresa, sin compromiso.</p>
+      <a href="#contacto" class="btn-white">Solicitar diagnóstico <span>→</span></a>
     </div>
   </section>
 
@@ -210,18 +417,22 @@
   <footer id="contacto">
     <div class="footer-container">
       <div class="footer-brand">
-        <h3>Integral Connection Consulting</h3>
-        <p>Transformación, estrategia y eficiencia corporativa.</p>
+        <a href="#inicio" class="brand" aria-label="Integral Connection Consulting, inicio">
+          <img src="assets/logo.svg" alt="Integral Connection Consulting">
+          <span class="brand-name">INTEGRAL <span>CONNECTION</span></span>
+        </a>
+        <p>Consultoría integral B2B: transformación, estrategia y eficiencia corporativa.</p>
       </div>
       <div class="footer-links">
         <div>
-          <strong style="color: white;">Navegación</strong>
+          <strong>Navegación</strong>
           <a href="#inicio">Inicio</a>
           <a href="#servicios">Servicios</a>
-          <a href="#contacto">Contacto</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#proceso">Proceso</a>
         </div>
         <div>
-          <strong style="color: white;">Contacto</strong>
+          <strong>Contacto</strong>
           <a href="mailto:info@integralconnection.es">info@integralconnection.es</a>
           <a href="tel:+34900000000">+34 900 000 000</a>
         </div>
@@ -231,6 +442,24 @@
       &copy; 2026 Integral Connection Consulting. Todos los derechos reservados.
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById('navToggle');
+      var nav = document.getElementById('primaryNav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>
