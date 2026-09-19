@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=20260919b">
+  <link rel="stylesheet" href="assets/styles.css?v=20260919c">
 </head>
 <body>
 
@@ -86,36 +86,33 @@
 
   <!-- HÉROE PRINCIPAL -->
   <section class="hero" id="inicio">
+    <video class="hero-bg-video" id="heroVideo" poster="assets/video/hero-network-poster.jpg"
+           autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="assets/video/hero-network.webm" type="video/webm">
+      <source src="assets/video/hero-network.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <svg class="hero-hex hero-hex-watermark" viewBox="0 0 200 200" aria-hidden="true"><path fill="none" stroke="rgba(240,194,75,0.28)" stroke-width="1.4" d="M100,8 179.7,54 179.7,146 100,192 20.3,146 20.3,54 Z"/></svg>
+
     <div class="hero-content">
-      <div class="hero-grid">
-        <div class="hero-inner">
-          <span class="badge">Consultoría integral B2B</span>
-          <h1>Impulsamos el <span class="hl-gold">crecimiento estratégico</span> de tu empresa.</h1>
-          <p>Optimizamos procesos, conectamos oportunidades y acompañamos a tu organización hacia una transformación rentable y sostenible.</p>
-          <div class="hero-buttons">
-            <a href="#contacto" class="btn-white">Solicitar diagnóstico <span>→</span></a>
-            <a href="#servicios" class="btn-outline">Ver soluciones</a>
-          </div>
+      <div class="hero-inner">
+        <span class="badge">Consultoría integral B2B</span>
+        <h1>Impulsamos el <span class="hl-gold">crecimiento estratégico</span> de tu empresa.</h1>
+        <p>Optimizamos procesos, conectamos oportunidades y acompañamos a tu organización hacia una transformación rentable y sostenible.</p>
+        <div class="hero-buttons">
+          <a href="#contacto" class="btn-white">Solicitar diagnóstico <span>→</span></a>
+          <a href="#servicios" class="btn-outline">Ver soluciones</a>
         </div>
+      </div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <video class="hero-video" id="heroVideo" poster="assets/video/hero-network-poster.jpg"
-                 autoplay muted loop playsinline preload="auto">
-            <source src="assets/video/hero-network.webm" type="video/webm">
-            <source src="assets/video/hero-network.mp4" type="video/mp4">
-          </video>
-
-          <svg class="hero-hex hero-hex-b" viewBox="0 0 200 200"><path fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="2" d="M100,8 179.7,54 179.7,146 100,192 20.3,146 20.3,54 Z"/></svg>
-          <svg class="hero-hex hero-hex-c" viewBox="0 0 200 200"><path fill="none" stroke="rgba(240,194,75,0.35)" stroke-width="2" d="M100,8 179.7,54 179.7,146 100,192 20.3,146 20.3,54 Z"/></svg>
-
-          <div class="hero-chip hero-chip-a">
-            <span class="hero-chip-num">+95%</span>
-            <span class="hero-chip-label">Eficiencia operativa</span>
-          </div>
-          <div class="hero-chip hero-chip-b">
-            <span class="hero-chip-num">360°</span>
-            <span class="hero-chip-label">Acompañamiento por sector</span>
-          </div>
+      <div class="hero-floating" aria-hidden="true">
+        <div class="hero-chip hero-chip-a">
+          <span class="hero-chip-num">+95%</span>
+          <span class="hero-chip-label">Eficiencia operativa</span>
+        </div>
+        <div class="hero-chip hero-chip-b">
+          <span class="hero-chip-num">360°</span>
+          <span class="hero-chip-label">Acompañamiento por sector</span>
         </div>
       </div>
     </div>
