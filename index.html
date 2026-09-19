@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=20260919">
+  <link rel="stylesheet" href="assets/styles.css?v=20260919b">
 </head>
 <body>
 
@@ -99,7 +99,12 @@
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <svg class="hero-hex hero-hex-a" viewBox="0 0 200 200"><path fill="url(#icon-gold-grad)" fill-rule="evenodd" d="M100,8 179.7,54 179.7,146 100,192 20.3,146 20.3,54 Z M100,46 146.8,73 146.8,127 100,154 53.2,127 53.2,73 Z"/></svg>
+          <video class="hero-video" id="heroVideo" poster="assets/video/hero-network-poster.jpg"
+                 autoplay muted loop playsinline preload="auto">
+            <source src="assets/video/hero-network.webm" type="video/webm">
+            <source src="assets/video/hero-network.mp4" type="video/mp4">
+          </video>
+
           <svg class="hero-hex hero-hex-b" viewBox="0 0 200 200"><path fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="2" d="M100,8 179.7,54 179.7,146 100,192 20.3,146 20.3,54 Z"/></svg>
           <svg class="hero-hex hero-hex-c" viewBox="0 0 200 200"><path fill="none" stroke="rgba(240,194,75,0.35)" stroke-width="2" d="M100,8 179.7,54 179.7,146 100,192 20.3,146 20.3,54 Z"/></svg>
 
@@ -438,6 +443,27 @@
       }, { threshold: 0.4 });
 
       items.forEach(function (item) { observer.observe(item); });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var video = document.getElementById('heroVideo');
+      if (!video) return;
+      var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduceMotion) { video.pause(); return; }
+
+      if (!('IntersectionObserver' in window)) return;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            video.play().catch(function () {});
+          } else {
+            video.pause();
+          }
+        });
+      }, { threshold: 0.1 });
+      observer.observe(video);
     })();
   </script>
 
