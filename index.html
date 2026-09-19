@@ -15,9 +15,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=20260914">
+  <link rel="stylesheet" href="assets/styles.css?v=20260919">
 </head>
 <body>
+
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+
+  <!-- Sprite de gradientes reutilizados por los iconos duotono -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="icon-gold-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#FFDD33"/>
+        <stop offset="45%" stop-color="#F0C24B"/>
+        <stop offset="100%" stop-color="#C9971F"/>
+      </linearGradient>
+    </defs>
+  </svg>
 
   <!-- CABECERA -->
   <header>
@@ -69,16 +82,35 @@
     </div>
   </header>
 
+  <main id="main">
+
   <!-- HÉROE PRINCIPAL -->
   <section class="hero" id="inicio">
     <div class="hero-content">
-      <div class="hero-inner">
-        <span class="badge">Consultoría integral B2B</span>
-        <h1>Impulsamos el crecimiento estratégico de tu empresa.</h1>
-        <p>Optimizamos procesos, conectamos oportunidades y acompañamos a tu organización hacia una transformación rentable y sostenible.</p>
-        <div class="hero-buttons">
-          <a href="#contacto" class="btn-white">Solicitar diagnóstico <span>→</span></a>
-          <a href="#servicios" class="btn-outline">Ver soluciones</a>
+      <div class="hero-grid">
+        <div class="hero-inner">
+          <span class="badge">Consultoría integral B2B</span>
+          <h1>Impulsamos el <span class="hl-gold">crecimiento estratégico</span> de tu empresa.</h1>
+          <p>Optimizamos procesos, conectamos oportunidades y acompañamos a tu organización hacia una transformación rentable y sostenible.</p>
+          <div class="hero-buttons">
+            <a href="#contacto" class="btn-white">Solicitar diagnóstico <span>→</span></a>
+            <a href="#servicios" class="btn-outline">Ver soluciones</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <svg class="hero-hex hero-hex-a" viewBox="0 0 200 200"><path fill="url(#icon-gold-grad)" fill-rule="evenodd" d="M100,8 179.7,54 179.7,146 100,192 20.3,146 20.3,54 Z M100,46 146.8,73 146.8,127 100,154 53.2,127 53.2,73 Z"/></svg>
+          <svg class="hero-hex hero-hex-b" viewBox="0 0 200 200"><path fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="2" d="M100,8 179.7,54 179.7,146 100,192 20.3,146 20.3,54 Z"/></svg>
+          <svg class="hero-hex hero-hex-c" viewBox="0 0 200 200"><path fill="none" stroke="rgba(240,194,75,0.35)" stroke-width="2" d="M100,8 179.7,54 179.7,146 100,192 20.3,146 20.3,54 Z"/></svg>
+
+          <div class="hero-chip hero-chip-a">
+            <span class="hero-chip-num">+95%</span>
+            <span class="hero-chip-label">Eficiencia operativa</span>
+          </div>
+          <div class="hero-chip hero-chip-b">
+            <span class="hero-chip-num">360°</span>
+            <span class="hero-chip-label">Acompañamiento por sector</span>
+          </div>
         </div>
       </div>
     </div>
@@ -105,40 +137,57 @@
   <!-- POR QUÉ ELEGIRNOS -->
   <section class="why-us" id="nosotros">
     <div class="container">
-      <div class="section-header">
-        <span class="section-subtitle">Por qué Integral Connection</span>
-        <h2 class="section-title">Un partner, no solo un proveedor.</h2>
-        <p class="section-desc">Combinamos experiencia estratégica, metodología propia y acompañamiento cercano para que cada proyecto se traduzca en resultados reales.</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      <div class="why-split">
+        <div class="why-pull">
+          <div class="section-header">
+            <span class="section-subtitle">Por qué Integral Connection</span>
+            <h2 class="section-title">Un partner, no solo un proveedor.</h2>
+            <p class="section-desc">Combinamos experiencia estratégica, metodología propia y acompañamiento cercano para que cada proyecto se traduzca en resultados reales.</p>
           </div>
-          <h3>Experiencia contrastada</h3>
-          <p>Equipo especializado en consultoría de negocio, operaciones y transformación digital.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <div class="why-pull-stat">
+            <span class="why-pull-number">+120</span>
+            <span class="why-pull-label">Proyectos de consultoría y externalización comercial ejecutados</span>
           </div>
-          <h3>Resultados medibles</h3>
-          <p>Diagnósticos y KPIs claros desde el primer día para evaluar el impacto real de cada acción.</p>
         </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <h3>Acompañamiento cercano</h3>
-          <p>Trabajamos codo con codo con tu equipo, sin dejarte solo tras la fase de diagnóstico.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 12 15 16 10"></polyline></svg>
-          </div>
-          <h3>Compromiso ético</h3>
-          <p>Transparencia y rigor en cada recomendación, priorizando la sostenibilidad del negocio.</p>
-        </div>
+
+        <ul class="why-list">
+          <li class="why-row">
+            <span class="why-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path fill="#0F172A" d="M24 3 4 12v10c0 12 8.4 20.8 20 23 11.6-2.2 20-11 20-23V12L24 3Z"/><path fill="url(#icon-gold-grad)" d="m24 14 3.6 8.2 8.9.8-6.7 6 2 8.7L24 33.3l-7.8 4.4 2-8.7-6.7-6 8.9-.8L24 14Z"/></svg>
+            </span>
+            <div>
+              <h3>Experiencia contrastada</h3>
+              <p>Equipo especializado en consultoría de negocio, operaciones y transformación digital.</p>
+            </div>
+          </li>
+          <li class="why-row">
+            <span class="why-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><rect x="6" y="26" width="9" height="16" rx="2" fill="#0F172A"/><rect x="19.5" y="17" width="9" height="25" rx="2" fill="#0F172A"/><rect x="33" y="9" width="9" height="33" rx="2" fill="url(#icon-gold-grad)"/><path d="M6 21 17 12l8 6 15-12" stroke="url(#icon-gold-grad)" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <h3>Resultados medibles</h3>
+              <p>Diagnósticos y KPIs claros desde el primer día para evaluar el impacto real de cada acción.</p>
+            </div>
+          </li>
+          <li class="why-row">
+            <span class="why-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="17" cy="16" r="8" fill="#0F172A"/><circle cx="32" cy="18" r="6.5" fill="url(#icon-gold-grad)" opacity="0.9"/><path fill="#0F172A" d="M4 41c0-8.3 6.7-13.5 13-13.5S30 32.7 30 41Z"/><path fill="url(#icon-gold-grad)" d="M24 41c0-6 4.4-10.8 10-10.8S44 35 44 41Z" opacity="0.9"/></svg>
+            </span>
+            <div>
+              <h3>Acompañamiento cercano</h3>
+              <p>Trabajamos codo con codo con tu equipo, sin dejarte solo tras la fase de diagnóstico.</p>
+            </div>
+          </li>
+          <li class="why-row">
+            <span class="why-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path fill="#0F172A" d="M24 3 6 10v11c0 12.6 7.7 20.8 18 24 10.3-3.2 18-11.4 18-24V10L24 3Z"/><path d="m16 24 6 6 11-12" stroke="url(#icon-gold-grad)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <h3>Compromiso ético</h3>
+              <p>Transparencia y rigor en cada recomendación, priorizando la sostenibilidad del negocio.</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -153,9 +202,10 @@
       </div>
 
       <div class="cards-grid">
-        <div class="card">
+        <div class="card card-featured">
+          <span class="card-ghost-num" aria-hidden="true">01</span>
           <div class="card-icon-wrap">
-            <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+            <svg viewBox="0 0 48 48"><rect x="6" y="6" width="36" height="36" rx="10" fill="#0F172A"/><path d="M15 26 21 32 34 17" stroke="url(#icon-gold-grad)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <div class="card-body">
             <span class="card-tag">Estrategia</span>
@@ -166,8 +216,9 @@
         </div>
 
         <div class="card">
+          <span class="card-ghost-num" aria-hidden="true">02</span>
           <div class="card-icon-wrap">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <svg viewBox="0 0 48 48"><circle cx="16" cy="15" r="7" fill="#0F172A"/><circle cx="31" cy="17" r="5.5" fill="url(#icon-gold-grad)" opacity="0.9"/><path fill="#0F172A" d="M3 40c0-7.7 6.2-12.6 13-12.6S29 32.3 29 40Z"/><path fill="url(#icon-gold-grad)" d="M23 40c0-5.6 4.1-10 9.5-10S42 34.4 42 40Z" opacity="0.9"/></svg>
           </div>
           <div class="card-body">
             <span class="card-tag">Operaciones</span>
@@ -178,8 +229,9 @@
         </div>
 
         <div class="card">
+          <span class="card-ghost-num" aria-hidden="true">03</span>
           <div class="card-icon-wrap">
-            <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+            <svg viewBox="0 0 48 48"><path fill="#0F172A" fill-rule="evenodd" d="M24 4 42 14v20L24 44 6 34V14Z M24 16 34 22v10L24 38 14 32V22Z"/><circle cx="24" cy="27" r="4.5" fill="url(#icon-gold-grad)"/></svg>
           </div>
           <div class="card-body">
             <span class="card-tag">Tecnología</span>
@@ -200,28 +252,28 @@
         <h2 class="section-title">Cómo trabajamos contigo.</h2>
         <p class="section-desc">Un proceso claro, de principio a fin, para que sepas en todo momento en qué fase está tu proyecto.</p>
       </div>
-      <div class="process-grid">
-        <div class="process-step">
-          <div class="process-number">1</div>
+      <ol class="process-grid">
+        <li class="process-step">
+          <span class="process-number" aria-hidden="true">01</span>
           <h3>Diagnóstico</h3>
           <p>Analizamos tu situación actual, procesos y objetivos de negocio.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-number">2</div>
+        </li>
+        <li class="process-step">
+          <span class="process-number" aria-hidden="true">02</span>
           <h3>Estrategia</h3>
           <p>Diseñamos un plan de acción a medida, con prioridades y plazos claros.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-number">3</div>
+        </li>
+        <li class="process-step">
+          <span class="process-number" aria-hidden="true">03</span>
           <h3>Implementación</h3>
           <p>Ejecutamos junto a tu equipo, aportando herramientas y metodología.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-number">4</div>
+        </li>
+        <li class="process-step">
+          <span class="process-number" aria-hidden="true">04</span>
           <h3>Seguimiento</h3>
           <p>Medimos resultados y ajustamos el rumbo para garantizar el impacto.</p>
-        </div>
-      </div>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -234,6 +286,8 @@
       <a href="#contacto" class="btn-white">Solicitar diagnóstico <span>→</span></a>
     </div>
   </section>
+
+  </main>
 
   <!-- PIE DE PÁGINA -->
   <footer id="contacto">
