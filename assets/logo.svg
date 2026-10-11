@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Integral Connection Consulting">
+  <defs>
+    <linearGradient id="ic-amber" x1="8%" y1="95%" x2="95%" y2="5%">
+      <stop offset="0%" stop-color="#FFDD33"/>
+      <stop offset="45%" stop-color="#F6B22D"/>
+      <stop offset="100%" stop-color="#DE7F1B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Anillo hexagonal, degradado único (sin facetas alternas) -->
+  <path
+    fill="url(#ic-amber)"
+    fill-rule="evenodd"
+    d="M100,8 179.7,54 179.7,146 100,192 20.3,146 20.3,54 Z
+       M100,46 146.8,73 146.8,127 100,154 53.2,127 53.2,73 Z"
+  />
+
+  <!-- Pliegues sutiles (efecto cinta) arriba y abajo -->
+  <path d="M83,25 L100,46" stroke="#FFF6DD" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <path d="M117,175 L100,154" stroke="#B9660F" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- Núcleo blanco -->
+  <polygon points="100,46 146.8,73 146.8,127 100,154 53.2,127 53.2,73" fill="#FFFFFF"/>
+
+  <!-- Monograma IC -->
+  <text x="100" y="107" text-anchor="middle" dominant-baseline="central"
+        font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="64"
+        letter-spacing="-2" fill="#4A4A4A">IC</text>
+</svg>
