@@ -229,6 +229,24 @@ nav a.nav-cta-ghost { display: none; }
 .stat-number { font-size: clamp(2.2rem, 4.4vw, 3.1rem); font-weight: 800; background: var(--icc-gradient-gold); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 8px; display: block; }
 .stat-label { font-size: 14px; color: rgba(255,255,255,0.7); max-width: 26ch; }
 
+/* Anillo de progreso animado por cifra */
+.stat-ring-wrap { position: relative; width: 72px; height: 72px; margin-bottom: 18px; }
+.stat-ring { width: 100%; height: 100%; transform: rotate(-90deg); }
+.stat-ring-track { fill: none; stroke: rgba(255,255,255,0.14); stroke-width: 5; }
+.stat-ring-fill {
+  fill: none; stroke: url(#icon-gold-grad); stroke-width: 5; stroke-linecap: round;
+  stroke-dasharray: 263.9px; stroke-dashoffset: 263.9px;
+  transition: stroke-dashoffset 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.stat-item.in-view .stat-ring-fill {
+  stroke-dashoffset: calc(263.9px - (263.9px * var(--ring-pct)) / 100);
+}
+.stat-ring-icon { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.stat-ring-icon svg { width: 26px; height: 26px; }
+@media (prefers-reduced-motion: reduce) {
+  .stat-ring-fill { transition: none; }
+}
+
 @media (max-width: 768px) {
   .stats-container { grid-template-columns: 1fr; gap: 28px; }
   .stat-item { padding: 0 0 0 20px; }
